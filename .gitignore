@@ -1,0 +1,54 @@
+# OS files
+.DS_Store
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+.ipynb_checkpoints/
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and local runtime files
+*.log
+logs/
+
+# Streamlit local config/secrets
+.streamlit/secrets.toml
+
+# Model and experiment artifacts
+output/
+*.joblib
+*.pkl
+*.npy
+*.npz
+*.pt
+*.pth
+
+# Local datasets and exports (uncomment if needed)
+# dataset/
+# *.csv

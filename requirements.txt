@@ -1,0 +1,14 @@
+numpy
+pandas
+scikit-learn
+torch
+torchvision
+transformers
+joblib
+lightgbm
+xgboost
+nltk
+requests
+tqdm
+Pillow
+streamlit

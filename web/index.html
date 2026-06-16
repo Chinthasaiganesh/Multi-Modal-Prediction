@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Price Predictor</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Multi Modal Product Price Prediction</p>
+          <h1>Smart Product Price Estimator</h1>
+        </div>
+        <div class="hero-chip">Final Year Project</div>
+      </section>
+
+      <section class="workspace">
+        <div class="input-pane">
+          <form id="predict-form">
+            <div class="field-grid">
+              <div>
+                <label for="product_name">Product name</label>
+                <input id="product_name" name="product_name" required value="Rani 14-Spice Mango Chutney, 10.5oz Glass Jar">
+              </div>
+
+              <div>
+                <label for="image_link">Product image</label>
+                <input id="image_link" name="image_link" type="url" required value="https://m.media-amazon.com/images/I/71hoAn78AWL.jpg">
+              </div>
+            </div>
+
+            <label for="description">Product description</label>
+            <textarea id="description" name="description" class="description-box" spellcheck="false" required>Ready to eat Indian mango chutney made with natural ingredients. Vegan, gluten free, non-GMO, packed in a glass jar for pantry storage.</textarea>
+
+            <label for="product_details">Product details</label>
+            <textarea id="product_details" name="product_details" spellcheck="false">Bullet Point 1: Premium gourmet food grade chutney
+Bullet Point 2: Vegan, gluten free, all natural
+Value: 10.5
+Unit: Ounce
+Pack Size: 1</textarea>
+
+            <div class="actions">
+              <button type="submit">Predict Price</button>
+              <button type="button" id="clear-button" class="secondary">Clear</button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="result-pane" aria-live="polite">
+          <div class="preview-card">
+            <img id="image-preview" alt="Product preview" src="https://m.media-amazon.com/images/I/71hoAn78AWL.jpg">
+          </div>
+
+          <div class="result-stack">
+            <div class="status" id="status">Ready</div>
+            <div class="price-wrap">
+              <span class="currency">$</span>
+              <span id="price">--</span>
+            </div>
+            <dl>
+              <div>
+                <dt>Input</dt>
+                <dd>Text + image</dd>
+              </div>
+              <div>
+                <dt>Model</dt>
+                <dd>Local trained artifacts</dd>
+              </div>
+              <div>
+                <dt>Output</dt>
+                <dd>Predicted price</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
