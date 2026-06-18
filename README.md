@@ -139,7 +139,17 @@ python sample_code.py
 
 ## Streamlit frontend (model integration)
 
-This repository now includes a Streamlit app that integrates directly with the prepared model artifacts in the `output/` folder.
+This repository now includes a modular Streamlit app that integrates directly with the prepared model artifacts in the `output/` folder.
+
+### App structure (modularized)
+
+- `streamlit_app.py`: Main entrypoint (run this file).
+- `app_modules/config.py`: Shared constants and paths.
+- `app_modules/preprocess.py`: Text cleaning and numeric feature extraction.
+- `app_modules/inference.py`: Artifact loading and prediction functions.
+- `app_modules/ui_theme.py`: Theme tokens, global CSS, header, and sidebar switcher.
+- `app_modules/ui_landing.py`: Landing page UI and home image loading.
+- `app_modules/ui_prediction.py`: Single and batch prediction tabs.
 
 ### Files used by the app
 
@@ -152,7 +162,7 @@ This repository now includes a Streamlit app that integrates directly with the p
 
 ```bash
 pip install -r requirements.txt
-streamlit run streamlit_app.py
+python -m streamlit run streamlit_app.py
 ```
 
 ### Supported inference modes
